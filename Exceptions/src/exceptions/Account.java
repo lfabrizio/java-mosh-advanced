@@ -1,6 +1,8 @@
 package exceptions;
 
+import javax.print.DocFlavor;
 import java.io.IOException;
+import java.rmi.AccessException;
 
 public class Account {
     private float balance;
@@ -10,7 +12,7 @@ public class Account {
         }
         public void withdraw(float value) {
         if (value > balance)
-            throw new InsufficientFunds();
+            throw new AccessException((new InsufficientFunds());
         }
     }
 }

@@ -2,6 +2,7 @@ package exceptions;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.rmi.AccessException;
 
 // checked exception(done at compiler time)
 public class ExceptionsDemo {
@@ -10,9 +11,8 @@ public class ExceptionsDemo {
         account.withdraw(10);
         try {
             account.deposit(-1);
-        } catch (IOException e) {
-            System.out.println("logging");
-            throw e;
+        } catch (AccessException e) {
+            e.printStackTrace();
         }
     }
 }
