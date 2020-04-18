@@ -7,6 +7,7 @@ import java.io.IOException;
 public class ExceptionsDemo {
     public static void show() throws IOException {
         var account = new Account();
+        account.withdraw(10);
         try {
             account.deposit(-1);
         } catch (IOException e) {
