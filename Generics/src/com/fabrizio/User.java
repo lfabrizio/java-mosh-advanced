@@ -1,4 +1,4 @@
 package com.fabrizio;
 
-public class User {
+public class User implements Comparable {
 }
