@@ -3,10 +3,8 @@ package com.fabrizio;
 public class Main {
 
     public static void main(String[] args) {
-	var list = new List();
-	list.add(Integer.valueOf(1));
-	list.add("1");
-
-	
+	var list = new GenericList<User>();
+	list.add(new User);
+	User user = list.get(0);
     }
 }
