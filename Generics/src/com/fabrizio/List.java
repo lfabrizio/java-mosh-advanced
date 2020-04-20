@@ -1,5 +1,5 @@
 package com.fabrizio;
-
+// non generic class
 public class List {
     private Object[] items = new Object[10];
     private int count;
