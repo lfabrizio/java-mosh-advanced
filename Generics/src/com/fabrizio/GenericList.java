@@ -2,7 +2,7 @@ package com.fabrizio;
 
 import java.text.NumberFormat;
 
-// will replace T's with the constraints which is Number 
+// will replace T's with the constraints which is Number
 public class GenericList <T extends Number> {
     private T[] items = (T[]) new Object[10];
     private int count;
