@@ -7,7 +7,13 @@ public class Utils {
     public static void printUser(User user) {
         System.out.println(user);
     }
-    public static void printUsers(GenericList<User> users) {
 
+    // class cap# 1  extends User{}
+    //
+    public static void printUsers
+    (GenericList<? super User> users) {
+    GenericList<user> temp = new GenericList<>();
+    User x = users.get(0);
+    users.add(new User(1));
     }
 }
