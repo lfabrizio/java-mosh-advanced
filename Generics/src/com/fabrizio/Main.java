@@ -3,7 +3,7 @@ package com.fabrizio;
 public class Main {
 
     public static void main(String[] args) {
-       Utils.print(1, "mosh");
-        }
-    }
-}
+       var instructors = new GenericList<Instructor>();
+       var users = new GenericList<User>()
+       Utils.printUsers(users);
+}}
