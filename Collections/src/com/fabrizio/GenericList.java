@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 // will replace T's with the constraints which is Number
-    public class GenericList <T> implements Iterable<>{
+    public class GenericList <T> implements Iterable {
     private T[] items = (T[]) new Object[10];
         private int count;
 
