@@ -1,11 +1,11 @@
 package com.fabrizio;
 import com.fabrizio.GenericList;
+import com.fabrizio.collections.CollectionsDemo;
+
 public class Main {
 
     public static void main(String[] args) {
-	var list = new GenericList<String>();
-	for (var item : list)
-        System.out.println(item);
+	CollectionsDemo.show();
     }
     }
 }
