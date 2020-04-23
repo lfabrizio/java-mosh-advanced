@@ -1,11 +1,21 @@
 package com.fabrizio;
 import com.fabrizio.GenericList;
 import com.fabrizio.collections.CollectionsDemo;
+import com.fabrizio.collections.Customer;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-	CollectionsDemo.show();
+        List<Customer> customers = new ArrayList<>();
+        customers.add(new Customer("b"));
+        customers.add(new Customer("a"));
+        customers.add(new Customer("c"));
+        Collections.sort(customers);
+        System.out.println(customers);
     }
     }
 }
