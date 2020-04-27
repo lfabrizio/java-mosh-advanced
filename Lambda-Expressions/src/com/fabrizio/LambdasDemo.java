@@ -1,16 +1,16 @@
 package com.fabrizio;
+
+import java.util.List;
+
 //Lamdas standalone function without belonging to a class
 public class LambdasDemo {
-    public LambdasDemo(String message) {
+    public static void show() {
+        List<Integer> list = List.of(1, 2, 3);
+        // Imperative Programming(for, if/else, switch/case)
+        for (var item : list)
+            System.out.println(item);
 
-    }
-
-    public static void show(){
-        greet(message -> new LambdasDemo(message));
-        greet(LambdasDemo::new);
-        };
-
-    public static void greet(Printer printer) {
-        printer.print("Hello World");
+            // Declarative Programming
+        list.forEach(item -> System.out.println(item));
     }
 }
