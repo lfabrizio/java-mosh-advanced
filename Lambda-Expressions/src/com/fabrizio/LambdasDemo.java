@@ -1,10 +1,13 @@
 package com.fabrizio;
 //Lamdas standalone function without belonging to a class
 public class LambdasDemo {
-    public static String prefix = "-";
+    public LambdasDemo(String message) {
+
+    }
 
     public static void show(){
-        greet(message -> System.out.println( prefix+ message));
+        greet(message -> new LambdasDemo(message));
+        greet(LambdasDemo::new);
         };
 
     public static void greet(Printer printer) {
