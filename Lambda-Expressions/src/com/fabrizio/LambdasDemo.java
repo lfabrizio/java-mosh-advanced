@@ -1,17 +1,15 @@
 package com.fabrizio;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 //Lamdas standalone function without belonging to a class
 public class LambdasDemo {
     public static void show() {
-        Predicate<String> hasLeftBrace = str -> str.startsWith("{");
-        Predicate<String> hasRightBrace = str -> str.startsWith("}");
-
-        hasLeftBrace.negate();
+        // a, b -> a + b -> square
+        BinaryOperator<Integer> add = (a, b) -> a + b;
+        Function<Integer, Integer> square = a -> a * a;
+       var result = add.andThen(square).apply(1, 2);
+        System.out.println(result);
     }
 }
