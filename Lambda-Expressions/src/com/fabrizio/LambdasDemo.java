@@ -6,10 +6,10 @@ import java.util.function.*;
 //Lamdas standalone function without belonging to a class
 public class LambdasDemo {
     public static void show() {
-        // a, b -> a + b -> square
-        BinaryOperator<Integer> add = (a, b) -> a + b;
-        Function<Integer, Integer> square = a -> a * a;
-       var result = add.andThen(square).apply(1, 2);
+        UnaryOperator<Integer> square = n -> n * n;
+        UnaryOperator<Integer> increment = n -> n + 1;
+
+        var result = increment.andThen(square).apply(1);
         System.out.println(result);
     }
 }
