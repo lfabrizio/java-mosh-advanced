@@ -11,6 +11,6 @@ public class CreatingStreamsDemo {
     public static void show() {
         Stream.iterate(1, n -> n + 1)
                 .limit(10)
-                .forEach(n -> System.out.println(n););
+                .forEach(n -> System.out.println(n));
     }
 }
