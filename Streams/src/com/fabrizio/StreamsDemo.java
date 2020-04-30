@@ -11,7 +11,6 @@ public class StreamsDemo {
         new Movie("b", 20)
         );
         movies.stream()
-                .skip(20)
-                .limit(5)
+                .dropWhile(m -> m.getLikes())
                 .forEach(m -> System.out.println(m.getTitle()));
 }
