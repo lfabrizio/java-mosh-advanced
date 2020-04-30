@@ -1,12 +1,19 @@
 package com.fabrizio;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class StreamsDemo {
     public static void show() {
-        Stream.of(List.of(1, 2, 3), List.of(4, 5, 6));
-////        .flatMap(list -> list.stream())
-//        .forEach(n -> System.out.println(n);
+        var movies = List.of (
+        new Movie("a", 10),
+        new Movie("b", 20)
+        );
+            Predicate<Movie> isPopular = m -> m.getLikes() > 10;
+                movies.stream()
+                .filter(isPopular)
+                .forEach(m -> System.out.println(m.getTitle()));
+
     }
 }
