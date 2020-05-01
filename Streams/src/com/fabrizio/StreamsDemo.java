@@ -8,18 +8,13 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 
-public class StreamsDemo  {
+public class StreamsDemo {
     public static void show() {
-        var movies = List.of (
-        new Movie("a", 10),
+        var movies = List.of(
                 new Movie("a", 10),
-                 new Movie("b", 20)
+                new Movie("a", 20),
+                new Movie("b", 30)
         );
-        movies.stream()
-                .map(Movie::getLikes) // stream off integers
-            .distinct() // stream integer
-        .forEach (System.out::println);
-
-        }
-
+        // peeking elements
+    }
 }
