@@ -15,13 +15,13 @@ public class StreamsDemo {
                 new Movie("a", 20),
                 new Movie("b", 30)
         );
-        // peeking elements
-        movies.stream()
-                .filter(m -> m.getLikes() > 10)
-                .peek(m -> System.out.println("filtered: " + m.getTitle()))
-                .map(Movie::getTitle)
-                .peek(t -> System.out.println("mapped: " + t)
-                    .forEach(System.out::println);
+        // reducers
+
+       var result = movies.stream()
+                .max(Comparator.comparing(Movie::getLikes))
+               .get();
+
+        System.out.println(result.getTitle());
 
     }
 }
