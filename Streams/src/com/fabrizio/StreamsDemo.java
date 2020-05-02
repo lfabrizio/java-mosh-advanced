@@ -18,8 +18,10 @@ public class StreamsDemo {
         // peeking elements
         movies.stream()
                 .filter(m -> m.getLikes() > 10)
-                .peek(m -> System.out.println("filetered: " + m.getTitle()))
-                .map(Movie:: getTitle)
+                .peek(m -> System.out.println("filtered: " + m.getTitle()))
+                .map(Movie::getTitle)
+                .peek(t -> System.out.println("mapped: " + t)
                     .forEach(System.out::println);
+
     }
 }
