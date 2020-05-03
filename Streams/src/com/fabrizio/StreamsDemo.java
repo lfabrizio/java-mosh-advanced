@@ -17,11 +17,11 @@ public class StreamsDemo {
                 new Movie("a", 20),
                 new Movie("b", 30)
         );
-        var result = movies.stream()
+        var re = movies.stream()
                 .filter(m -> m.getLikes() > 10)
                 .map(Movie::getTitle)
                 .collect(Collectors.joining(","));
-        System.out.println(result);
+        System.out.println(re);
 
     }
 }
