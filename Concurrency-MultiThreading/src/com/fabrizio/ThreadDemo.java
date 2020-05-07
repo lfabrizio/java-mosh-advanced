@@ -5,5 +5,12 @@ public class ThreadDemo {
         System.out.println(Thread.currentThread().getName());
     Thread thread = new Thread(new DownloadFileTAsk());
     thread.start();
+
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("file is ready");
 }
 }
