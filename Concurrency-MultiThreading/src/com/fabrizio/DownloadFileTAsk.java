@@ -10,6 +10,6 @@ public class DownloadFileTAsk  implements Runnable{
             System.out.println("downloading byte" + i);
         }
 
-        System.out.println("Download complete" + Thread.currentThread().getName());
+        System.out.println("Download complete" + Thread.currentThread().getId());
     }
 }
