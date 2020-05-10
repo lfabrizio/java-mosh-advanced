@@ -19,6 +19,6 @@ public class ThreadDemo {
                 e.printStackTrace();
             }
         }
-        System.out.println(status.getTotalBytes());
+        
     }
 }

@@ -7,6 +7,6 @@ public class DownloadStatus {
         return totalBytes;
     }
     public void incrementTotalBytes() {
-        totalBytes++;
+        totalBytes++
     }
 }
